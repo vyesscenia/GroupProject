@@ -30,3 +30,33 @@ if the user request balance of their savings account, it will output to the user
 "Error. You did not enter proper number."
 
 """
+
+"""
+#options
+print("options:")
+print("1. Make a Deposit")
+print("2. Match a Withdrawal")
+print("3. Obtain Balnace")
+print("4. Quit")
+balance=2000
+while True:
+    num=int(input("Make a selections from the options menu: "))
+    if num==1:
+        deposit= float(input("Enter amount of deposit: "))
+        balance +=deposit
+        print("Deposit Processe.")
+    elif num==2:
+        withdrawal=float(input("Enter amount of withdrawal: "))
+        while (withdrawal>balance):
+            print("Denied. Maximum withdrawal is ${0:,.2f}"
+                    .format(balance))
+            withdrawal=float(input("Enter amount of withdrawal: "))
+        balance-=withdrawal
+        print("Withdrawal Processed.")
+    elif num==3:
+        print("Balance: ${0:,.2f}".format(balance))
+    elif num==4:
+        break
+    else:
+        print("You did not enter a proper number.")
+"""
